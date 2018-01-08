@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收发货平台 - 首页</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet"><!--datapicker-->
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>账户余额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins animated fadeInUp">￥275,800</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <a href="cash-applyForCash.html" class="label label-primary pull-right J_menuItem" data-menuname="申请提现">立即提现</a>
+                        <h5>可提现金额</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins animated fadeInUp">￥106,120</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <a href="cash-cashingList.html" class="label label-danger pull-right J_menuItem" data-menuname="提现申请中列表">7笔提现待处理</a>
+                        <h5>提现处理中</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins animated fadeInUp">￥80,600</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>基本信息</h5>
+                <div class="ibox-tools">
+                    <a class="J_menuItem" href="account-info.html" data-menuname="账户资料">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>账户名称：石家庄开发区华彤计算机有限公司</p>
+                        <p>地址：河北石家庄睿和中心1106</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>联系人：杨杰</p>
+                        <p>联系电话：18600000000</p>
+                        <p>联系邮箱：qqreqwer@qq.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox float-e-margins marquee-wrapper">
+            <div class="ibox-title">
+                <h5 class="hidden-xs">公告 <small class="m-l-sm"><marquee direction="x" width="700" align="middle" onmouseover="this.stop();" onmouseout="this.start();">
+                    <a href="news-article.html" class="J_menuItem" data-menuname="平台公告">这是一个自定义公告</a></marquee></small></h5>
+                <div class="ibox-tools">
+                    <a style="color: #ed5565;" href="#">
+                        <i class="fa fa-download"></i>
+                        下载平台操作手册
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>数据汇总</h5>
+                <div class="ibox-tools" style="top: -7px;">
+                    <form role="form" class="form-inline">
+                        <div class="form-group" id="data_5">
+                            <label class="font-noraml"></label>
+                            <div class="input-daterange input-group">
+                                <input type="text" class="input-sm form-control datetimepicker2" value="" placeholder="请选择日期" />
+                                <span class="input-group-addon">至</span>
+                                <input type="text" class="input-sm form-control datetimepicker2" value="" placeholder="请选择日期" />
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-sm" type="submit" style="margin-bottom: 0;">查询</button>
+                    </form>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="row text-center">
+                    <div class="col-sm-3">
+                        <h4>支付笔数</h4>
+                        <h1 class="no-margins animated fadeInUp">24322笔</h1>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>支付成功金额</h4>
+                        <h1 class="no-margins animated fadeInUp">￥275,800</h1>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>退款笔数</h4>
+                        <h1 class="no-margins animated fadeInUp">10笔</h1>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>退款金额</h4>
+                        <h1 class="no-margins animated fadeInUp">￥275,800</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>平台公告</h5>
+                        <div class="ibox-tools">
+                            <a href="news-lists.html" class="J_menuItem" data-menuname="平台公告">
+                                更多 <i class="fa fa-angle-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content no-padding">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html?id=1" class="J_menuItem" data-menuname="平台公告">每个人都有一个死角， 自己走不出来，别人也闯不进去。</a>
+                            </li>
+                            <li class="list-group-item ">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html?id=2" class="J_menuItem" data-menuname="平台公告">我把最深沉的秘密放在那里。</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" class="J_menuItem" data-menuname="平台公告">你不懂我，我不怪你。</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" class="J_menuItem" data-menuname="平台公告">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" class="J_menuItem" data-menuname="平台公告">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>平台新闻</h5>
+                        <div class="ibox-tools">
+                            <a href="news-lists.html" class="J_menuItem" data-menuname="平台新闻">
+                                更多 <i class="fa fa-angle-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content no-padding">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" class="J_menuItem" data-menuname="平台新闻">每个人都有一个死角， 自己走不出来，别人也闯不进去。</a>
+                            </li>
+                            <li class="list-group-item ">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" data-menuname="平台新闻">我把最深沉的秘密放在那里。</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" data-menuname="平台新闻">你不懂我，我不怪你。</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" data-menuname="平台新闻">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">2017-08-22</span><a href="news-article.html" data-menuname="平台新闻">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <script src="js/contabs-sub.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN',
+                minView:2
+            });
+
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

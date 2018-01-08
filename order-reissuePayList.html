@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>收发货平台 - 支付订单补发</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>订单管理</li>
+                <li><strong>支付订单补发</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>支付订单补发</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p class="form-control-static">选择时间段</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option value="1" selected="">今天</option>
+                                <option value="2">三个月</option>
+                                <option value="2017">(2017)年</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　订单号</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入订单号">
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　商户订单号</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="商户订单号">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary no-margins">查询</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="example" style="margin-bottom: 20px;">
+                <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <button type="button" class="btn btn-primary submit-button">
+                        批量补发通知
+                    </button>
+                </div>
+                <table id="exampleTableToolbar" data-mobile-responsive="true" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th data-field="col-01" class="text-center">商户编号</th>
+                            <th data-field="col-02" class="text-center">商户名称</th>
+                            <th data-field="col-03" class="text-center">订单号</th>
+                            <th data-field="col-04" class="text-center">商户订单号</th>
+                            <th data-field="col-05" class="text-center">产品类型名称</th>
+                            <th data-field="col-06" class="text-center">卡号</th>
+                            <th data-field="col-07" class="text-center">提交金额</th>
+                            <th data-field="col-08" class="text-center">成交金额</th>
+                            <th data-field="col-09" class="text-center">发货详情</th>
+                            <th data-field="col-10" class="text-center">提交时间</th>
+                            <th data-field="col-11" class="text-center">异步通知次数</th>
+                            <th data-field="col-12" class="text-center">通知结果</th>
+                            <th data-field="col-13" class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>yyb</td>
+                            <td>08250001220002244786</td>
+                            <td>b3b181741ec44326b8a5b4a894545</td>
+                            <td>网银WEB支付</td>
+                            <td></td>
+                            <td>0.0100</td>
+                            <td>0.0100</td>
+                            <td></td>
+                            <td>2017/8/25<br>16:54:13</td>
+                            <td>3</td>
+                            <td>Error:转发服务</td>
+                            <td><button class="btn btn-primary btn-sm btn-outline">手工补发</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('.submit-button').click(function () {
+                swal({
+                    title: "提交成功",
+                    text: "补发信息提交成功",
+                    type: "success"
+                });
+            });
+
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10
+            });
+
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收发货平台 - 下载任务</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li><strong>下载任务</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>下载任务</h5>
+            </div>
+            <div class="ibox-content form-inline">
+                <div class="form-group">
+                    <p class="form-control-static">提交时间</p>
+                </div>
+                <div class="form-group">
+                    <label class="font-noraml"></label>
+                    <div class="input-daterange input-group">
+                        <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                        <span class="input-group-addon">至</span>
+                        <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p class="form-control-static">查询类型</p>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="0">全部</option>
+                        <option value="1">类别名称</option>
+                        <option value="2">任务名称</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                </div>
+                <div class="form-group">
+                    <p class="form-control-static">状态</p>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="-1">全部</option>
+                        <option value="0">初始化 </option>
+                        <option value="1">处理中</option>
+                        <option value="2">处理完成</option>
+                        <option value="3">处理出错</option>
+                        <option value="9">已取消</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary no-margins">搜索</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ibox-content">
+            <table id="exampleTableToolbar" data-mobile-responsive="true" class="text-center table-hover">
+                <thead>
+                    <tr>
+                        <th data-field="col-01" class="text-center">编号</th>
+                        <th data-field="col-02" class="text-center">类型名称</th>
+                        <th data-field="col-03" class="text-center">任务描述</th>
+                        <th data-field="col-04" class="text-center">下载文件大小</th>
+                        <th data-field="col-06" class="text-center">状态</th>
+                        <th data-field="col-07" class="text-center">状态描述</th>
+                        <th data-field="col-08" class="text-center">加入任务时间</th>
+                        <th data-field="col-09" class="text-center">执行开始时间</th>
+                        <th data-field="col-10" class="text-center">执行结束时间</th>
+                        <th data-field="col-05" class="text-center">下载文件路径</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+                    <tr>
+                        <td>324</td>
+                        <td>代付订单明细</td>
+                        <td>admin20170702145653代付订单明细下载</td>
+                        <td>8.58 K</td>
+                        <td>处理完成</td>
+                        <td></td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td>2017/7/2<br>14:56:53</td>
+                        <td><a href="#" class="btn btn-sm btn-primary btn-outline">下载</a></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10
+            });
+
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN'
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

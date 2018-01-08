@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>收发货平台 - 通道费率</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>我的账户</li>
+                <li><strong>通道费率</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>通道费率</h5>
+            </div>
+            <div class="ibox-content">
+                <table id="exampleTableToolbar" data-mobile-responsive="true" class="table text-center">
+                    <thead>
+                        <tr class="active">
+                            <th data-field="col-01" class="text-center">通道ID</th>
+                            <th data-field="col-02" class="text-center">通道名称</th>
+                            <th data-field="col-03" class="text-center">费率</th>
+                            <th data-field="col-04" class="text-center">状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--<tr class="no-records-found"><td colspan="4">没有找到匹配的记录</td></tr>-->
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-danger">未开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-danger">未开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-danger">未开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-danger">未开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+                        <tr>
+                            <td>0000001</td>
+                            <td>微信二维码支付</td>
+                            <td>0.99</td>
+                            <td><span class="label label-primary">已开通</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('#exampleTableToolbar').bootstrapTable({
+                iconSize: 'outline',
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10
+            });
+        });
+    </script>
+
+</body>
+
+</html>

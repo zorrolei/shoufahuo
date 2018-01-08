@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收发货平台 - 申请提现</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>提现管理</li>
+                <li><strong>申请提现</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>申请提现</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">提现至银行卡</label>
+                        <div class="col-sm-4">
+                            <select class="form-control">
+                                <option selected="" value="1452*****54  中国银行    *明">1452*****54&nbsp; 中国银行&nbsp; &nbsp; *明</option>
+                                <option value="1323*****87   中国工商银行   *明">1323*****87&nbsp;&nbsp; 中国工商银行&nbsp;&nbsp; *明</option>
+                                <option value="6789****87   中国建设银行  *明">6789****87&nbsp;&nbsp; 中国建设银行&nbsp; *明</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">余额</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">￥500.00</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">提现时间</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">周一至周五/每天结算</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">可提现金额</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">500.00</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">单笔最低提现金额</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">500.00</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">单笔最高提现金额</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">50000.00</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">每日提现时间</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">08:00:00---20:00:00　<span class="text-danger">晚上22点到早8点不允许提现!</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">提现金额</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="请输入提现金额">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">手续费说明</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static"><span class="text-danger">后台设置的手续费说明</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-sm-2 control-label">验证码</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="输入右侧验证码">
+                        </div>
+                        <div class="col-sm-8 form-inline">
+                            <img src="img/getcode.png" width="95" height="30" alt="">
+                            <a href="#">换一张</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress" class="col-sm-2 control-label">短信验证码</label>
+                        <div class="col-sm-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-white">发送验证码</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">提现密码</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="请输入提现密码">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <a href="javascript:void(0)" class="btn btn-primary submit-button">提交申请</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('.submit-button').click(function () {
+                swal({
+                    title: "提交成功",
+                    text: "提现申请提交成功，请耐心等待审核",
+                    type: "success"
+                });
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>

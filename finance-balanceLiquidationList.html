@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>收发货平台 - 直清明细</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>财务管理</li>
+                <li><strong>直清明细</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>直清明细</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p class="form-control-static">选择时间</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-noraml"></label>
+                            <div class="input-daterange input-group">
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                                <span class="input-group-addon">至</span>
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　按条件</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="入驻编号">入驻编号</option>
+                                <option value="商户ID">商户ID</option>
+                                <option value="商户用户名">商户用户名</option>
+                                <option value="商户公司名">商户公司名</option>
+                                <option value="收款人账户名">收款人账户名</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                        </div>
+                    </div>
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                        <div class="form-group">
+                            <p class="form-control-static">清算类型</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="全部">全部</option>
+                                <option value="T1">T1</option>
+                                <option value="T0">T0</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　订单状态</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="成功">成功</option>
+                                <option value="失败">失败</option>
+                                <option value="处理中">处理中</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary no-margins">查询</button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="example" style="margin-bottom: 20px;">
+                <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <button type="button" class="btn btn-outline btn-primary submit-button">
+                        导出为EXCEL
+                    </button>
+                </div>
+                <table id="exampleTableToolbar" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th data-field="col-01" class="text-center" data-footer-formatter='合计'>银行类型</th>
+                            <th data-field="col-02" class="text-center">收款人账户号</th>
+                            <th data-field="col-03" class="text-center">收款人账户名</th>
+                            <th data-field="col-04" class="text-center" data-footer-formatter="total01">实际提现金额</th>
+                            <th data-field="col-05" class="text-center">清算类型</th>
+                            <th data-field="col-06" class="text-center" data-footer-formatter="total02">提现手续费</th>
+                            <th data-field="col-07" class="text-center" data-footer-formatter="total03">交易手续费</th>
+                            <th data-field="col-08" class="text-center">应答描述</th>
+                            <th data-field="col-09" class="text-center">状态</th>
+                            <th data-field="col-10" class="text-center">清算日期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-warning">处理中</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>中国工商银行</td>
+                            <td>415236521451256</td>
+                            <td>张三</td>
+                            <td>5000</td>
+                            <td>T1</td>
+                            <td>1.00</td>
+                            <td>1.00</td>
+                            <td>交易成功</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td>2017-08-03<br>12:00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN'
+            });
+
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10,
+                showFooter:true
+            });
+
+            $('.submit-button').click(function () {
+                swal({
+                    title: "导出成功",
+                    text: "请前往下载页面进行下载",
+                    type: "success",
+                    confirmButtonText: "确定"
+                })
+            });
+        });
+    </script>
+    <script>
+        function total01(data) {
+            return '10000.00';
+        }
+        function total02(data) {
+            return '100.00';
+        }
+        function total03(data) {
+            return '100.00';
+        }
+    </script>
+
+</body>
+
+</html>

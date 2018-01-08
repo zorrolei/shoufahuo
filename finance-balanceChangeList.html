@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>收发货平台 - 账户余额变动明细</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>财务管理</li>
+                <li><strong>账户余额变动明细</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>账户余额变动明细</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p class="form-control-static">选择时间</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-noraml"></label>
+                            <div class="input-daterange input-group">
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                                <span class="input-group-addon">至</span>
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                        <div class="form-group">
+                            <p class="form-control-static">按种类</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="全部">全部</option>
+                                <option value="订单充值">订单充值</option>
+                                <option value="财务加款">财务加款</option>
+                                <option value="财务扣款">财务扣款</option>
+                                <option value="订单退款">订单退款</option>
+                                <option value="提现">提现</option>
+                                <option value="转账">转账</option>
+                                <option value="银行直清">银行直清</option>
+                                <option value="T1直清提现">T1直清提现</option>
+                                <option value="提现手续费">提现手续费</option>
+                                <option value="转账手续费">转账手续费</option>
+                                <option value="转账失败退款">转账失败退款</option>
+                                <option value="转账失败退手续费">转账失败退手续费</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　按收支</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="全部">全部</option>
+                                <option value="收入">收入</option>
+                                <option value="支出">支出</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　按条件</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="全部">全部</option>
+                                <option value="商户订单号">商户订单号</option>
+                                <option value="系统订单号">系统订单号</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary no-margins">查询</button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="example" style="margin-bottom: 20px;">
+                <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <button type="button" class="btn btn-outline btn-primary submit-button">
+                        导出为EXCEL
+                    </button>
+                </div>
+                <table id="exampleTableToolbar" data-mobile-responsive="true" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th data-field="col-01" class="text-center" data-footer-formatter='合计'>商户订单号</th>
+                            <th data-field="col-02" class="text-center">系统订单号</th>
+                            <th data-field="col-03" class="text-center">操作种类</th>
+                            <th data-field="col-04" class="text-center">操作类型</th>
+                            <th data-field="col-05" class="text-center" data-footer-formatter="total01">变动前余额</th>
+                            <th data-field="col-06" class="text-center" data-footer-formatter="total02">变动金额</th>
+                            <th data-field="col-07" class="text-center" data-footer-formatter="total03">变动后余额</th>
+                            <th data-field="col-08" class="text-center">变动时间</th>
+                            <th data-field="col-09" class="text-center">说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+                        <tr>
+                            <td>8b795443f20b49bcb0ed9b64919d541f</td>
+                            <td>07040000120017155510</td>
+                            <td>订单退款</td>
+                            <td>支出</td>
+                            <td>1150</td>
+                            <td>200</td>
+                            <td>950</td>
+                            <td>2017-07-04<br>14:55:55</td>
+                            <td>退款时填写的备注</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN'
+            });
+
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10,
+                showFooter:true
+            });
+
+            $('.submit-button').click(function () {
+                swal({
+                    title: "导出成功",
+                    text: "请前往下载页面进行下载",
+                    type: "success",
+                    confirmButtonText: "确定"
+                })
+            });
+
+        });
+    </script>
+    <script>
+        function total01(data) {
+            return '10000.00';
+        }
+        function total02(data) {
+            return '100.00';
+        }
+        function total03(data) {
+            return '100.00';
+        }
+    </script>
+</body>
+
+</html>

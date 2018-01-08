@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收发货平台 - 管理提现银行卡</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>提现管理</li>
+                <li><strong>管理提现银行卡</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>管理提现银行卡</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p class="form-control-static">选择省份</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择省份">请选择省份</option>
+                                <option value="北京">北京</option>
+                                <option value="上海">上海</option>
+                                <option value="深圳">深圳</option>
+                            </select>
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择城市">请选择城市</option>
+                                <option value="石家庄">石家庄</option>
+                                <option value="唐山">唐山</option>
+                                <option value="保定">保定</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　银行名称</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择银行">请选择银行</option>
+                                <option value="中国银行">中国银行</option>
+                                <option value="中国工商银行">中国工商银行</option>
+                                <option value="中国建设银行">中国建设银行</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　账户属性</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="全部">全部</option>
+                                <option value="对公">对公</option>
+                                <option value="对私">对私</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　账户状态</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="全部">全部</option>
+                                <option value="已通过">已通过</option>
+                                <option value="未通过">未通过</option>
+                                <option value="审核中（修改）">审核中（修改）</option>
+                                <option value="审核中（删除）">审核中（删除）</option>
+                                <option value="审核中（新增）">审核中（新增）</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-inline" style="margin-top: 10px;">
+                        <div class="form-group">
+                            <p class="form-control-static">按条件</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="开户支行">开户支行</option>
+                                <option value="开户人">开户人</option>
+                                <option value="开户账号">开户账号</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary no-margins">查询</button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="example" style="margin-bottom: 20px;">
+                <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <a href="javascript:void(0);" type="button" class="btn btn-outline btn-primary submit-button">
+                        导出为EXCEL
+                    </a>
+                </div>
+                <table id="exampleTableToolbar" data-mobile-responsive="true" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th data-field="col-01" class="text-center">编号</th>
+                            <th data-field="col-02" class="text-center">银行名称</th>
+                            <th data-field="col-03" class="text-center">所在省</th>
+                            <th data-field="col-04" class="text-center">所在城市</th>
+                            <th data-field="col-05" class="text-center">开户支行</th>
+                            <th data-field="col-06" class="text-center">开户人</th>
+                            <th data-field="col-07" class="text-center">开户账号</th>
+                            <th data-field="col-08" class="text-center">账户属性</th>
+                            <th data-field="col-09" class="text-center">状态</th>
+                            <th data-field="col-10" class="text-center">默认</th>
+                            <th data-field="col-11" class="text-center">备注</th>
+                            <th data-field="col-12" class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-danger">未通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-warning">审核中（修改）</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>中国银行</td>
+                            <td>河北</td>
+                            <td>石家庄</td>
+                            <td>中国银行红旗大街支行</td>
+                            <td>张三</td>
+                            <td>62125412562541254512</td>
+                            <td>对私</td>
+                            <td><span class="text-info">已通过</span></td>
+                            <td>是</td>
+                            <td></td>
+                            <td><a href="cash-addBankCard.html" class="label label-primary">修改</a>　<a href="javascript:void(0);" type="button" class="label label-danger delete-button">删除</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10
+            });
+
+            $('.delete-button').click(function () {
+                swal({
+                        title: "确认删除",
+                        text: "确定删除这条纪录吗",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "取消",
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确定删除",
+                        closeOnConfirm: false
+                    },
+                    function(){
+                        swal("删除成功", "提现银行卡删除成功", "success");
+                    });
+            });
+            $('.submit-button').click(function () {
+                swal({
+                    title: "导出成功",
+                    text: "请前往下载页面进行下载",
+                    type: "success",
+                    confirmButtonText: "确定"
+                })
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

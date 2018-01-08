@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>收发货平台 - API接入</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>我的账户</li>
+                <li><strong>API接入</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>API接入</h5>
+            </div>
+            <div class="ibox-content" id="ibox-content">
+                <div id="vertical-timeline" class="vertical-container light-timeline">
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>1.下载用户服务协议并联系商务签订协议</h2>
+                            <a href="#" class="btn btn-sm btn-primary">下载用户服务协议</a>
+                            <span class="vertical-date text-danger">未签订（请尽快签订协议， 以避免影响平台正常使用）</span>
+                            <!--<span class="vertical-date text-info">已签订用户服务协议</span>-->
+                        </div>
+                    </div>
+
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon blue-bg">
+                            <i class="fa fa-download"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>2.下载接口文档</h2>
+                            <a href="#" class="btn btn-sm btn-success" style="margin-left: 10px;"> 接口示例（含PHP 、.net ） </a>
+                            <a href="#" class="btn btn-sm btn-success" style="margin-left: 10px;"> 微信APP支付接口文档 </a>
+                            <a href="#" class="btn btn-sm btn-success" style="margin-left: 10px;"> 微信支付宝网银网关支付接口文档 </a>
+                            <a href="#" class="btn btn-sm btn-success"> 点卡支付接口文档 </a>
+                            <span class="vertical-date"></span>
+                        </div>
+                    </div>
+
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon lazur-bg">
+                            <i class="fa fa-user"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>3.获取商户ID和安全码</h2>
+                            <div class="form-horizontal" style="margin-top: 20px;">
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">商户编号</label>
+                                    <div class="col-sm-10">
+                                        <p class="form-control-static no-margins">0000001</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">MD5Key</label>
+                                    <div class="col-sm-5">
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" value="08098090">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-white" style="width: 110px;">显示MD5Key</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label">DesKey</label>
+                                    <div class="col-sm-5">
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" value="08098090">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-white" style="width: 110px;">显示DesKey</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon yellow-bg">
+                            <i class="fa fa-retweet"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>4.对接接口 </h2>
+                        </div>
+                    </div>
+
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon lazur-bg">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>5.上线走量</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="well white-bg">
+                    <h3>注意事项</h3>
+                    <p>1. 下载与签订协议中相应的接口文档进行对接；API接口提交卡需要对接点卡支付接口；<br>
+                        2. 钥是对接唯一的加密密钥，请妥善保管；<br>
+                        3. 对接过程中如遇到技术问题可联系我方研发人员沟通；<br>
+                        4. 提交使用的商户订单号请不要重复提交；<br>
+                        5. 接口接入成功后，提交面值请按照真实面值提交；<br>
+                        6. 在卡已经提交的情况下，充值未结束时请不要再次提交该卡；</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>

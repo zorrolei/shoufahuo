@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>收发货平台 - 支付订单列表</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>订单管理</li>
+                <li><strong>支付订单列表</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="alert alert-danger">
+            温馨提示：本平台仅支持分时间段查询！您可查询今天的记录或者查询今天以前三个月内（不含今天）的记录或者只查询2017年以前的记录，不支持跨段查询。
+        </div>
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>支付订单列表</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p class="form-control-static">选择时间</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option value="">提交时间</option>
+                                <option value="">操作时间</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-noraml"></label>
+                            <div class="input-daterange input-group">
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                                <span class="input-group-addon">至</span>
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-primary no-margins" type="button">前一天</button>
+                            <button class="btn btn-primary no-margins" type="button">后一天</button>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static"> 收货状态</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="成功">成功</option>
+                                <option value="全部">全部</option>
+                                <option value="失败">失败</option>
+                                <option value="未处理">未处理</option>
+                                <option value="未付款">未付款</option>
+                                <option value="已关闭">已关闭</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-inline" style="margin-top: 10px;">
+
+                        <div class="form-group">
+                            <p class="form-control-static">　通知状态</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="成功">成功</option>
+                                <option value="失败">失败</option>
+                                <option value="未发送">未发送</option>
+                                <option value="全部">全部</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　支付通道</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="微信WAP支付">微信WAP支付</option>
+                                <option value="支付宝二维码">支付宝二维码</option>
+                                <option value="微信二维码">微信二维码</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="form-control-static">按条件</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="商户订单号">商户订单号</option>
+                                <option value="平台订单号">平台订单号</option>
+                                <option value="商品名称">商品名称</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　成交金额</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="等于">等于</option>
+                                <option value="大于">大于</option>
+                                <option value="小于">小于</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="" placeholder="请输入金额" style="max-width: 100px;">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary no-margins">查询</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="example" style="margin-bottom: 20px;">
+                <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <a href="javascript:void(0);" type="button" class="btn btn-outline btn-primary submit-button">
+                        导出为EXCEL
+                    </a>
+
+                </div>
+                <table id="exampleTableToolbar" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th data-field="col-01" class="text-center" data-footer-formatter='合计'>订单号</th>
+                            <th data-field="col-02" class="text-center">商品名称</th>
+                            <th data-field="col-03" class="text-center">支付通道</th>
+                            <th data-field="col-04" class="text-center" data-footer-formatter="total01">提交金额</th>
+                            <th data-field="col-05" class="text-center" data-footer-formatter="total02">成交金额</th>
+                            <th data-field="col-06" class="text-center">提交时间</th>
+                            <th data-field="col-07" class="text-center">操作时间</th>
+                            <th data-field="col-08" class="text-center">收货状态</th>
+                            <th data-field="col-09" class="text-center">通知状态</th>
+                            <th data-field="col-10" class="text-center">备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-warning">未处理</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>10.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-warning">未付款</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-warning">未付款</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-muted">已关闭</span></td>
+                            <td><span class="text-info">成功</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td><span class="text-warning">未发送</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>07160001220002241526<br>
+                                商户: E96F375A-9D84-4209-92DF-9C0AD16B38A1</td>
+                            <td>测试订单test</td>
+                            <td>微信二维码支付</td>
+                            <td>100.0000</td>
+                            <td>100.0000</td>
+                            <td>2017/7/16<br>11:55:59</td>
+                            <td>2017/7/17<br>13:18:36</td>
+                            <td><span class="text-info">成功</span></td>
+                            <td><span class="text-danger">失败</span></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <script src="js/contabs-sub.js"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10,
+                showFooter:true
+            });
+
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN'
+            });
+
+            $('.submit-button').click(function () {
+                swal({
+                        title: "导出成功",
+                        text: "请前往下载页面进行下载",
+                        type: "success",
+                        confirmButtonText: "确定"
+                    })
+            });
+
+
+
+        });
+    </script>
+    <script>
+        function total01(data) {
+            return '10000.00';
+        }
+        function total02(data) {
+            return '100.00';
+        }
+    </script>
+</body>
+
+</html>

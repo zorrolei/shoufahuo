@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收发货平台 - 通道收入统计</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+
+    <link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <!--datapicker-->
+    <link href="css/plugins/datetimepicker/datetimepicker.min.css" rel="stylesheet">
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-6">
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>统计分析</li>
+                <li><strong>通道收入统计</strong></li>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>通道收入统计</h5>
+            </div>
+            <div class="ibox-content">
+                <form action="">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <p class="form-control-static">选择时间</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-noraml"></label>
+                            <div class="input-daterange input-group">
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                                <span class="input-group-addon">至</span>
+                                <input type="text" class="form-control datetimepicker2" value="" placeholder="请选择日期" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="form-control-static">　按通道</p>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="支付通道">支付通道</option>
+                                <option value="卡类通道">卡类通道</option>
+                            </select>
+                            <select name="" id="" class="form-control">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="网银">网银</option>
+                                <option value="支付宝">支付宝</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary no-margins">查询</button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="ibox-content">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <h4>成功订单（条）</h4>
+                    <h1 class="no-margins">2000</h1>
+                </div>
+                <div class="col-sm-4">
+                    <h4>成交金额</h4>
+                    <h1 class="no-margins">￥106,120</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox-content">
+            <div class="example">
+                <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                    <button type="button" class="btn btn-outline btn-primary submit-button">
+                        导出为EXCEL
+                    </button>
+                </div>
+                <table id="exampleTableToolbar" data-mobile-responsive="true" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th data-field="col-01" class="text-center">通道类别</th>
+                            <th data-field="col-02" class="text-center">通道</th>
+                            <th data-field="col-03" class="text-center">成功订单（条）</th>
+                            <th data-field="col-04" class="text-center">成交金额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+                        <tr>
+                            <td>支付通道</td>
+                            <td>网银</td>
+                            <td>500</td>
+                            <td>5222.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Bootstrap table -->
+    <script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="js/plugins/bootstrap-table/locale/bootstrap-table-CN.min.js"></script>
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datetimepicker/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datetimepicker/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.datetimepicker2').datetimepicker({
+                format: 'yyyy-mm-dd hh:ii:ss',
+                autoclose:true,
+                todayBtn:'linked',
+                language:'zh-CN'
+            });
+
+            $('#exampleTableToolbar').bootstrapTable({
+                showColumns: true,
+                toolbar: '#exampleToolbar',
+                iconSize: 'outline',
+                icons: {
+                    columns: 'glyphicon-list'
+                },
+                pagination:true,
+                sidePagination:'client',
+                pageNumber:1,
+                pageSize:10
+            });
+            $('.submit-button').click(function () {
+                swal({
+                    title: "导出成功",
+                    text: "请前往下载页面进行下载",
+                    type: "success",
+                    confirmButtonText: "确定"
+                })
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
