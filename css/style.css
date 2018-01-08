@@ -2951,7 +2951,7 @@ a.forum-item-title:hover {
 }
 
 .vertical-timeline-content .btn {
-    float: right;
+    float: left;
 }
 
 #vertical-timeline.light-timeline:before {
